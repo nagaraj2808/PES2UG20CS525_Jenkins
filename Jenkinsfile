@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'sdfh'
+                echo "Deployment successfull"
             }
         }
     }
