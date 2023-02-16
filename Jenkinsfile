@@ -6,7 +6,7 @@ pipeline {
                 dir('main/') {
                     sh 'g++ hello.cpp'
                 }
-                build job: 'my-other-job'
+                build job: 'PES2UG20CS525-1'
             }
         }
 
