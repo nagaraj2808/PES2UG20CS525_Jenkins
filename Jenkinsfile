@@ -3,10 +3,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ hello.cpp'
-                build job: 'PES2UG20CS525-1'
+                dir('main/') {
+                    sh 'g++ hello.cpp'
+                }
+                build job: 'my-other-job'
             }
         }
+
         stage('Test') {
             steps {
                 sh './a.out'
