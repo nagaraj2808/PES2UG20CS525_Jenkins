@@ -12,7 +12,9 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh './a.out'
+               dir('main/') {
+                    sh 'g++ hello.cpp'
+                }
                 echo "Build stage successful"
             }
         }
